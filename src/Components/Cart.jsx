@@ -5,7 +5,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { useDispatch } from 'react-redux';
-import { cartSlice } from '../Slices/CartSlices';
+import { addtoCart } from '../Slices/CartSlices';
 
 
 function Cart() {
@@ -31,7 +31,12 @@ function Cart() {
    const dropref=useRef(null);
    const handleAddCart = (item) =>{
     console.log(item);
-    dispatch(cartSlice())
+    dispatch(addtoCart({
+     imgs:item.imgs,
+    name:item.name,
+    description:item.description,
+    price:item.price 
+    }))
    }
   return (
     <section className=" bg-[#f2f2f2] ">
