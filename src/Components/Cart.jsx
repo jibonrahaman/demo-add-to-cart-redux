@@ -53,15 +53,15 @@ function Cart() {
           </div>
           <div className='px-2'>
 
-            <div className=' flex gap-x-2'>
+            <div className=' flex gap-x-2  border-b-4'>
                 <div className=' w-[100px]'>
-                  <img src={p1} alt="" />
+                  <img src={p1} alt="" className=' w-full' />
                 </div>
                   <div className=' w-[60%] '>
-                    <p className=' w-full '>HP 15s-eq1578AU AMD Athlon Silver 3050U 8GB 256GB SSD 15.6 Inch FHD Display Silver Laptop </p>
-                    <p>Tk 4548674</p>
+                    <p className=' w-full font-medium text-[14px]'>HP 15s-eq1578AU AMD Athlon Silver 3050U 8GB 256GB SSD 15.6 Inch FHD Display Silver Laptop </p>
+                    <p className='mt-3 font-medium text-[13px]'>Tk 4548674</p>
                   </div>
-              <RiDeleteBin6Line size={20} className=' mt-16 text-blue-700' />
+              <RiDeleteBin6Line size={20} className=' mt-16 text-blue-700 ' />
             </div>
 
           </div>
