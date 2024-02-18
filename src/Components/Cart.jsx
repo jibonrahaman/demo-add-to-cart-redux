@@ -30,12 +30,13 @@ function Cart() {
    },[])
    const dropref=useRef(null);
    const handleAddCart = (item) =>{
-    console.log(item);
+    const {imgs,name,description,price}=item
     dispatch(addtoCart({
-     imgs:item.imgs,
-    name:item.name,
-    description:item.description,
-    price:item.price 
+     imgs:imgs,
+    name:name,
+    description:description,
+    price:price,
+    quantity:1
     }))
    }
   return (
