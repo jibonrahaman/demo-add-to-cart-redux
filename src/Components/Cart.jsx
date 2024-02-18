@@ -42,24 +42,23 @@ function Cart() {
   return (
     <section className=" bg-[#f2f2f2] ">
       <div className=' max-w-container mx-auto pt-3'>
-        <div className=' flex justify-between'>
+        <div className=' flex justify-between mb-4'>
           <h2 className=' px-3 py-1 bg-black text-white w-[100px]  rounded-md mb-6  '>Computing</h2>
           <button onClick={handleCart}>
             <MdOutlineShoppingCart size={40} />
           </button>
 
         </div>
-        <div className=' flex flex-wrap gap-y-6 gap-x-10 '>
+        <div className=' flex flex-wrap  gap-x-10 '>
           {
             show.map((item) => {
               const { id, imgs, name, description, price } = item
-              return <div key={id} className=' mt-5 mb-10 group bg-white overflow-hidden'>
+              return <div key={id} className='  mb-10 group bg-white overflow-hidden'>
                 <div className=' relative'>
                   <img src={imgs} alt="" className='w-full group-hover:scale-110 duration-500 object-cover object-center' />
                   <button onClick={()=>handleAddCart(item)} className='absolute top-10 right-5 px-2 py-2 hidden group-hover:block group  rounded-full bg-gray-300 '>
                     <MdOutlineShoppingCart size={20}/>
                        </button>
-
 
                 </div>
                <div className=' mt-4'>
