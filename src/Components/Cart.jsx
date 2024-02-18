@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import p1 from '/images/p1.png'
 import data from '../Data'
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 function Cart() {
   const [show,setShow] =useState(data)
@@ -15,6 +16,8 @@ function Cart() {
               return <div key={id} className=' mt-5 mb-10 group bg-white overflow-hidden'>
               <div>
               <img src={imgs} alt=""  className='w-full group-hover:scale-105 duration-500 object-cover object-center'/>
+              <MdOutlineShoppingCart />
+
               </div>
                <h2 className=' text-center'>{name}</h2>
                <p className=' w-[300px] text-[13px] px-3'>{description}</p>
