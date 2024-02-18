@@ -51,11 +51,19 @@ function Cart() {
             </div>
             <IoMdClose size={30} />
           </div>
-          <div className='px-5'>
-            <img src={p1} alt="" />
-            <p>HP 15s-eq1578AU AMD Athlon Silver 3050U 8GB 256GB SSD 15.6 Inch FHD Display Silver Laptop</p>
-            <p>Tk 4548674</p>
-            <RiDeleteBin6Line size={20} className=' text-blue-500' />
+          <div className='px-2'>
+
+            <div className=' flex gap-x-2'>
+                <div className=' w-[100px]'>
+                  <img src={p1} alt="" />
+                </div>
+                  <div className=' w-[60%] '>
+                    <p className=' w-full '>HP 15s-eq1578AU AMD Athlon Silver 3050U 8GB 256GB SSD 15.6 Inch FHD Display Silver Laptop </p>
+                    <p>Tk 4548674</p>
+                  </div>
+              <RiDeleteBin6Line size={20} className=' mt-16 text-blue-700' />
+            </div>
+
           </div>
         </div>
       </div>
