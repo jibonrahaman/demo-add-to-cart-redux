@@ -13,7 +13,20 @@ function Cart() {
   const handleCart = () => {
      setShowCart(true)
   }
+  useEffect(()=>{
+    const falseHover=(e)=>{
+     if(!dropref.current.contains(e.target)){
+       setShowCart(false)
  
+     }
+ 
+    }
+    document.addEventListener("mousedown",falseHover) 
+    return()=>{
+     document.removeEventListener("mousedown",falseHover)
+    } 
+   },[])
+   const dropref=useRef(null);
   return (
     <section className=" bg-[#f2f2f2] ">
       <div className=' max-w-container mx-auto pt-3'>
@@ -49,7 +62,7 @@ function Cart() {
 
        {
         showCart && 
-        <div   className=' bg-white w-96 h-[700px] absolute top-0 right-0'>
+        <div  ref={dropref} className=' bg-white w-96 h-[700px] absolute top-0 right-0'>
         <div className='  flex justify-between  px-3 py-3  bg-gray-400 text-center items-center'>
           <div className=' flex gap-x-3 text-center items-center'>
             <MdOutlineShoppingCart size={20} />
