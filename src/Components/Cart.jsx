@@ -56,15 +56,17 @@ function Cart() {
               return <div key={id} className=' mt-5 mb-10 group bg-white overflow-hidden'>
                 <div className=' relative'>
                   <img src={imgs} alt="" className='w-full group-hover:scale-110 duration-500 object-cover object-center' />
-                  <div onClick={()=>handleAddCart(item)} className='absolute top-10 right-5 px-2 py-2 hidden group-hover:block  rounded-full bg-white '>
-                    <MdOutlineShoppingCart size={20} />
-                  </div>
+                  <button onClick={()=>handleAddCart(item)} className='absolute top-10 right-5 px-2 py-2 hidden group-hover:block group  rounded-full bg-gray-300 '>
+                    <MdOutlineShoppingCart size={20}/>
+                       </button>
 
 
                 </div>
-                <h2 className=' text-center'>{name}</h2>
+               <div className=' mt-4'>
+               <h2 className=' text-center'>{name}</h2>
                 <p className=' w-[300px] text-[13px] px-3'>{description}</p>
                 <p className=' text-center'>{price}</p>
+               </div>
               </div>
             })
           }
