@@ -2,7 +2,9 @@ import { useState } from 'react'
 import p1 from '/images/p1.png'
 import data from '../Data'
 import { MdOutlineShoppingCart } from "react-icons/md";
-
+const handleCart = ()=>{
+  console.log("cart");
+}
 function Cart() {
   const [show,setShow] =useState(data)
     return (
@@ -10,7 +12,9 @@ function Cart() {
           <div className=' max-w-container mx-auto pt-3'>
             <div className=' flex justify-between'>
               <h2 className=' px-3 py-1 bg-black text-white w-[100px]  rounded-md mb-6  '>Computing</h2>
+            <button onClick={handleCart}>
             <MdOutlineShoppingCart size={40} />
+            </button>
            
             </div>
           <div className=' flex flex-wrap gap-y-6 gap-x-10 '>
