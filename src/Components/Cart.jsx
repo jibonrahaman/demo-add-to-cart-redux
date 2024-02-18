@@ -2,6 +2,8 @@ import { useState } from 'react'
 import p1 from '/images/p1.png'
 import data from '../Data'
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { IoMdClose } from "react-icons/io";
+
 const handleCart = ()=>{
   console.log("cart");
 }
@@ -41,9 +43,13 @@ function Cart() {
            </div>
 
            <div className=' bg-black w-96 h-[700px] absolute top-0 right-0'>
-            <div className='  flex gap-x-3 px-3 py-3  bg-gray-400 text-center items-center'>
+            <div className='  flex justify-between  px-3 py-3  bg-gray-400 text-center items-center'>
+            <div className=' flex gap-x-3 text-center items-center'>
             <MdOutlineShoppingCart size={20} />
             <h2>Cart</h2>
+            </div>
+            <IoMdClose size={30} />
+
             </div>
            </div>
           </div>
