@@ -4,12 +4,14 @@ import data from '../Data'
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { useDispatch } from 'react-redux';
+import { cartSlice } from '../Slices/CartSlices';
 
 
 function Cart() {
   const [show, setShow] = useState(data)
   const [showCart,setShowCart] =useState(false)
-
+ const dispatch =useDispatch();
   const handleCart = () => {
      setShowCart(true)
   }
@@ -27,6 +29,10 @@ function Cart() {
     } 
    },[])
    const dropref=useRef(null);
+   const handleAddCart = (item) =>{
+    console.log(item);
+    dispatch(cartSlice())
+   }
   return (
     <section className=" bg-[#f2f2f2] ">
       <div className=' max-w-container mx-auto pt-3'>
@@ -44,7 +50,7 @@ function Cart() {
               return <div key={id} className=' mt-5 mb-10 group bg-white overflow-hidden'>
                 <div className=' relative'>
                   <img src={imgs} alt="" className='w-full group-hover:scale-110 duration-500 object-cover object-center' />
-                  <div className=' absolute top-10 right-5 px-2 py-2 hidden group-hover:block  rounded-full bg-white '>
+                  <div onClick={()=>handleAddCart(item)} className='absolute top-10 right-5 px-2 py-2 hidden group-hover:block  rounded-full bg-white '>
                     <MdOutlineShoppingCart size={20} />
                   </div>
 
