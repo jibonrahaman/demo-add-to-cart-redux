@@ -8,7 +8,11 @@ function Cart() {
     return (
         <section className=" bg-[#f2f2f2] ">
           <div className=' max-w-container mx-auto pt-3'>
-            <h2 className=' px-3 py-1 bg-black text-white w-[100px]  rounded-md mb-6  '>Computing</h2>
+            <div className=' flex justify-between'>
+              <h2 className=' px-3 py-1 bg-black text-white w-[100px]  rounded-md mb-6  '>Computing</h2>
+            <MdOutlineShoppingCart size={40} />
+           
+            </div>
           <div className=' flex flex-wrap gap-y-6 gap-x-10 '>
           {
             show.map((item)=>{
