@@ -62,7 +62,7 @@ function Cart() {
 
        {
         showCart && 
-        <div  ref={dropref} className=' bg-white w-96 h-[700px] absolute top-0 right-0'>
+        <div  ref={dropref} className=' bg-white w-96 h-[690px] absolute top-0 right-0'>
         <div className='  flex justify-between  px-3 py-3  bg-gray-400 text-center items-center'>
           <div className=' flex gap-x-3 text-center items-center'>
             <MdOutlineShoppingCart size={20} />
@@ -72,8 +72,9 @@ function Cart() {
           <IoMdClose  size={30} />
           </button>
         </div>
-        <div className='px-2'>
 
+          {/* mapping desing  */}          
+        <div className='px-2'>
           <div  className=' flex gap-x-2  border-b-4'>
               <div className=' w-[100px]'>
                 <img src={p1} alt="" className=' w-full' />
@@ -82,10 +83,18 @@ function Cart() {
                   <p className=' w-full font-medium text-[14px]'>HP 15s-eq1578AU AMD Athlon Silver 3050U 8GB 256GB SSD 15.6 Inch FHD Display Silver Laptop </p>
                   <p className='mt-3 font-medium text-[13px]'>Tk 4548674</p>
                 </div>
-            <RiDeleteBin6Line size={20} className='mt-12 text-blue-700 ' />
+           <button>
+           <RiDeleteBin6Line size={20} className='mt-12 text-blue-700 ' />
+           </button>
           </div>
-
         </div>
+        {/* mapping desing  */}
+         
+         <div className='  absolute bottom-3 border-t-4 w-96 text-center'>
+          <h2 className='text-xl font-semibold my-3'>Sub Total: Tk 489,300</h2>
+         <button className=' bg-black py-1 w-full rounded-sm text-white'>View Cart</button>
+         </div>
+       
       </div>
        }
       </div>
