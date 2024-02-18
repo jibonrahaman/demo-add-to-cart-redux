@@ -1,3 +1,4 @@
+import Cart from "./Components/Cart"
 
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
 
   return (
     <>
-      
+      <Cart/>
     </>
   )
 }
