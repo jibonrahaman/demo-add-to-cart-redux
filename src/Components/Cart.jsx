@@ -39,6 +39,13 @@ function Cart() {
            
             
            </div>
+
+           <div className=' bg-black w-96 h-[700px] absolute top-0 right-0'>
+            <div className='  flex gap-x-3 px-3 py-3  bg-gray-400 text-center items-center'>
+            <MdOutlineShoppingCart size={20} />
+            <h2>Cart</h2>
+            </div>
+           </div>
           </div>
         </section>
     )
