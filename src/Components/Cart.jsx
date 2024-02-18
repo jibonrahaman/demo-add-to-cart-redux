@@ -14,9 +14,12 @@ function Cart() {
             show.map((item)=>{
               const {id,imgs,name,description,price} =item
               return <div key={id} className=' mt-5 mb-10 group bg-white overflow-hidden'>
-              <div>
-              <img src={imgs} alt=""  className='w-full group-hover:scale-105 duration-500 object-cover object-center'/>
-              <MdOutlineShoppingCart />
+              <div className=' relative'>
+              <img src={imgs} alt=""  className='w-full group-hover:scale-110 duration-500 object-cover object-center'/>
+             <div className=' absolute top-10 right-5 px-2 py-2 hidden group-hover:block  rounded-full bg-white '>
+             <MdOutlineShoppingCart size={20} />
+             </div>
+             
 
               </div>
                <h2 className=' text-center'>{name}</h2>
