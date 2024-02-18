@@ -61,7 +61,7 @@ function Cart() {
                     <p className=' w-full font-medium text-[14px]'>HP 15s-eq1578AU AMD Athlon Silver 3050U 8GB 256GB SSD 15.6 Inch FHD Display Silver Laptop </p>
                     <p className='mt-3 font-medium text-[13px]'>Tk 4548674</p>
                   </div>
-              <RiDeleteBin6Line size={20} className=' mt-16 text-blue-700 ' />
+              <RiDeleteBin6Line size={20} className='mt-12 text-blue-700 ' />
             </div>
 
           </div>
