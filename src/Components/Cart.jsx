@@ -1,15 +1,19 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import p1 from '/images/p1.png'
 import data from '../Data'
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
-const handleCart = () => {
-  console.log("cart");
-}
+
 function Cart() {
   const [show, setShow] = useState(data)
+  const [showCart,setShowCart] =useState(false)
+
+  const handleCart = () => {
+     setShowCart(true)
+  }
+ 
   return (
     <section className=" bg-[#f2f2f2] ">
       <div className=' max-w-container mx-auto pt-3'>
@@ -43,29 +47,34 @@ function Cart() {
 
         </div>
 
-        <div className=' bg-white w-96 h-[700px] absolute top-0 right-0'>
-          <div className='  flex justify-between  px-3 py-3  bg-gray-400 text-center items-center'>
-            <div className=' flex gap-x-3 text-center items-center'>
-              <MdOutlineShoppingCart size={20} />
-              <h2>Cart</h2>
-            </div>
-            <IoMdClose size={30} />
+       {
+        showCart && 
+        <div   className=' bg-white w-96 h-[700px] absolute top-0 right-0'>
+        <div className='  flex justify-between  px-3 py-3  bg-gray-400 text-center items-center'>
+          <div className=' flex gap-x-3 text-center items-center'>
+            <MdOutlineShoppingCart size={20} />
+            <h2>Cart</h2>
           </div>
-          <div className='px-2'>
-
-            <div className=' flex gap-x-2  border-b-4'>
-                <div className=' w-[100px]'>
-                  <img src={p1} alt="" className=' w-full' />
-                </div>
-                  <div className=' w-[60%] '>
-                    <p className=' w-full font-medium text-[14px]'>HP 15s-eq1578AU AMD Athlon Silver 3050U 8GB 256GB SSD 15.6 Inch FHD Display Silver Laptop </p>
-                    <p className='mt-3 font-medium text-[13px]'>Tk 4548674</p>
-                  </div>
-              <RiDeleteBin6Line size={20} className='mt-12 text-blue-700 ' />
-            </div>
-
-          </div>
+          <button onClick={()=>setShowCart(false)}>
+          <IoMdClose  size={30} />
+          </button>
         </div>
+        <div className='px-2'>
+
+          <div  className=' flex gap-x-2  border-b-4'>
+              <div className=' w-[100px]'>
+                <img src={p1} alt="" className=' w-full' />
+              </div>
+                <div className=' w-[60%] '>
+                  <p className=' w-full font-medium text-[14px]'>HP 15s-eq1578AU AMD Athlon Silver 3050U 8GB 256GB SSD 15.6 Inch FHD Display Silver Laptop </p>
+                  <p className='mt-3 font-medium text-[13px]'>Tk 4548674</p>
+                </div>
+            <RiDeleteBin6Line size={20} className='mt-12 text-blue-700 ' />
+          </div>
+
+        </div>
+      </div>
+       }
       </div>
     </section>
   )
