@@ -100,7 +100,7 @@ function Cart() {
                 </div>
                   <div className=' w-[60%] '>
                     <p className=' w-full font-medium text-[14px]'>{description}</p>
-                    <p className='mt-3 font-medium text-[13px]'>Tk {price} * {quantity}</p>
+                   <p className='mt-3 font-medium text-[13px]'>Tk {price} * {quantity} =Total {quantity * price}</p>
                   </div>
              <button>
              <RiDeleteBin6Line size={20} className='mt-12 text-blue-700 ' />
