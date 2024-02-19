@@ -92,13 +92,14 @@ function Cart() {
         <div className=' h-[75%] overflow-y-scroll overflow-x-hidden'>
         {
           cartData.map((item,index)=>{
+            const {imgs,description,price}= item
           return  <div key={index} className='px-2 my-3'>
             <div  className=' flex gap-x-2  border-b-2 py-2'>
                 <div className=' w-[100px]'>
-                  <img src={p1} alt="" className=' w-full' />
+                  <img src={imgs} alt="" className=' w-full' />
                 </div>
                   <div className=' w-[60%] '>
-                    <p className=' w-full font-medium text-[14px]'>HP 15s-eq1578AU AMD Athlon Silver 3050U 8GB 256GB SSD 15.6 Inch FHD Display Silver Laptop </p>
+                    <p className=' w-full font-medium text-[14px]'>{description}</p>
                     <p className='mt-3 font-medium text-[13px]'>Tk 4548674  *  1</p>
                   </div>
              <button>
