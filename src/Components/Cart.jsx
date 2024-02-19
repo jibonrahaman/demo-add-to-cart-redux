@@ -92,7 +92,7 @@ function Cart() {
         <div className=' h-[75%] overflow-y-scroll overflow-x-hidden'>
         {
           cartData.map((item,index)=>{
-            const {imgs,description,price}= item
+            const {imgs,description,price,quantity}= item
           return  <div key={index} className='px-2 my-3'>
             <div  className=' flex gap-x-2  border-b-2 py-2'>
                 <div className=' w-[100px]'>
@@ -100,7 +100,7 @@ function Cart() {
                 </div>
                   <div className=' w-[60%] '>
                     <p className=' w-full font-medium text-[14px]'>{description}</p>
-                    <p className='mt-3 font-medium text-[13px]'>Tk 4548674  *  1</p>
+                    <p className='mt-3 font-medium text-[13px]'>Tk {price} * {quantity}</p>
                   </div>
              <button>
              <RiDeleteBin6Line size={20} className='mt-12 text-blue-700 ' />
