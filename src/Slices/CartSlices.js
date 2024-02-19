@@ -10,12 +10,12 @@ export const cartSlice = createSlice({
      if(state.cartItem.length > 0){
          let arr = [];
      state.cartItem.map((item)=>{
-        if(item.name ==action.payload.name){
+        if(item.title ==action.payload.title){
             item.quantity = item.quantity +1
-            arr.push(item.name)
+            arr.push(item.title)
         }      
      })
-     if(arr.indexOf (action.payload.name) == -1){
+     if(arr.indexOf (action.payload.title) == -1){
         state.cartItem.push(action.payload)
        }
      }else{

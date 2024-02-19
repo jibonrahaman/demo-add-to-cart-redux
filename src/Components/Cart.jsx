@@ -4,7 +4,7 @@ import data from '../Data'
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addtoCart } from '../Slices/CartSlices';
 
 
@@ -30,15 +30,18 @@ function Cart() {
    },[])
    const dropref=useRef(null);
    const handleAddCart = (item) =>{
-    const {imgs,name,description,price}=item
+    const {imgs,title,description,price}=item
     dispatch(addtoCart({
-     imgs:imgs,
-    name:name,
+    imgs:imgs,
+    title:title,
     description:description,
     price:price,
     quantity:1
     }))
    }
+  
+   const cartData = useSelector(state =>state.cart.cartItem);
+   
   return (
     <section className=" bg-[#f2f2f2] ">
       <div className=' max-w-container mx-auto pt-3'>
@@ -52,7 +55,7 @@ function Cart() {
         <div className=' flex flex-wrap  gap-x-10 '>
           {
             show.map((item) => {
-              const { id, imgs, name, description, price } = item
+              const { id, imgs, title, description, price } = item
               return <div key={id} className='  mb-10 group bg-white overflow-hidden'>
                 <div className=' relative'>
                   <img src={imgs} alt="" className='w-full group-hover:scale-110 duration-500 object-cover object-center' />
@@ -62,9 +65,9 @@ function Cart() {
 
                 </div>
                <div className=' mt-4'>
-               <h2 className=' text-center'>{name}</h2>
+               <h2 className=' text-center'>{title}</h2>
                 <p className=' w-[300px] text-[13px] px-3'>{description}</p>
-                <p className=' text-center'>{price}</p>
+                <p className=' text-center '>{price} </p>
                </div>
               </div>
             })
@@ -94,7 +97,7 @@ function Cart() {
               </div>
                 <div className=' w-[60%] '>
                   <p className=' w-full font-medium text-[14px]'>HP 15s-eq1578AU AMD Athlon Silver 3050U 8GB 256GB SSD 15.6 Inch FHD Display Silver Laptop </p>
-                  <p className='mt-3 font-medium text-[13px]'>Tk 4548674</p>
+                  <p className='mt-3 font-medium text-[13px]'>Tk 4548674  *  1</p>
                 </div>
            <button>
            <RiDeleteBin6Line size={20} className='mt-12 text-blue-700 ' />
