@@ -78,7 +78,7 @@ function Cart() {
 
        {
         showCart && 
-        <div  ref={dropref} className=' bg-white w-96 h-[690px] absolute top-0 right-0'>
+        <div  ref={dropref} className=' bg-white w-96 h-screen absolute top-0 right-0'>
         <div className='  flex justify-between  px-3 py-3  bg-gray-400 text-center items-center'>
           <div className=' flex gap-x-3 text-center items-center'>
             <MdOutlineShoppingCart size={20} />
